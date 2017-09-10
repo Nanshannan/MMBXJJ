@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买</title>
+    <!--引入bootstarp-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+    <!--引入BASE-->
+    <link rel="stylesheet/less" href="css/base.less"/>
+    <link rel="stylesheet/less" href="css/index.less"/>
+    <!--引入less-->
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+    <!--头部部分开始-->
+        <section id="header">
+            <a href="#" class="left logo">
+                <img src="images/header_logo.png" alt=""/>
+            </a>
+            <a href="#" class="right app">
+                <img src="images/header_app.png" alt=""/>
+            </a>
+        </section>
+    <!--头部部分结束-->
+    <!--搜索部分开始-->
+        <section id="search">
+            <form action="#">
+                <input type="search" placeholder="请输入您要搜索的商品"/>
+                <input type="submit" value="搜索"/>
+            </form>
+        </section>
+    <!--搜索部分结束-->
+    <!--菜单部分开始-->
+        <section id="menu">
+            <div class="row">
+
+            </div>
+        </section>
+    <!--菜单部分结束-->
+    <!--推荐部分开-->
+        <section id="recommend">
+            <div class="recommend-title">
+                <span class="left">更多优惠信息</span>
+                <a href="#" class="right"><img  src="http://www.zuyushop.com/wap/images/more.png" alt=""/></a>
+            </div>
+            <div class="recommend-list">
+
+                <!--<div class="media">-->
+                    <!--<div class="media-left">-->
+                        <!--<a href="#">-->
+                            <!--<img class="media-object" src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="...">-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="media-body">-->
+                        <!--<h4 class="">移动端凑单品：海天 鲜味 生抽 1.28L</h4>-->
+                        <!--<p class="red">10.9元</p>-->
+                        <!--<span class="left">京东商城10-25 14:10</span>-->
+                        <!--<span class="right">有1人评论</span>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+            </div>
+            <div class="recommend-more">
+                <a href="#">更多优惠信息</a>
+            </div>
+            <div class="recommend-title">
+                <span class="left">品牌排行</span>
+                <a href="#" class="right"><img  src="http://www.zuyushop.com/wap/images/more.png" alt=""/></a>
+            </div>
+        </section>
+    <!--推荐部分结束-->
+    <!--底部开始-->
+        <section id="footer">
+            <div class="row">
+                <div class="col-xs-4">
+                    <a href="#">登录</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">注册</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">返回顶部</a>
+                </div>
+            </div>
+            <p>
+                <a href="#" class="red">手机APP下载</a>
+                <a href="#">慢慢买手机版</a>
+                <a href="#"> -- 掌上比价平台</a>
+            </p>
+            <p></p>
+        </section>
+    <!--底部结束-->
+    <!--<script type="text/html" id="recommendTpl">-->
+        <!--{{each result as item i}}-->
+        <!--<div class="media">-->
+            <!--<div class="media-left">-->
+                <!--<a href="#">-->
+                    <!--{{#item.productImgSm}}-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="media-body">-->
+                <!--<h4 class="">{{item.productName}}</h4>-->
+                <!--<p class="red">{{item.productPinkage}}</p>-->
+                <!--<span class="left">{{item.productFrom}}{{item.productTime}}</span>-->
+                <!--<span class="right">{{item.productComCount}}</span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--{{/each}}-->
+    <!--</script>-->
+    <!--使用template.js模板-->
+    <!--<script type="text/html" id="recommendTpl">-->
+        <!--{{each result as item i}}-->
+        <!--<div class="media">-->
+            <!--<div class="media-left">-->
+                <!--<a href="#">-->
+                    <!--{{#item.productImgSm}}-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="media-body">-->
+                <!--<h4 class="">{{item.productName}}</h4>-->
+                <!--<p class="red">{{item.productPinkage}}</p>-->
+                <!--<span class="left">{{item.productFrom}}{{item.productTime}}</span>-->
+                <!--<span class="right">{{item.productComCount}}</span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--{{/each}}-->
+    <!--</script>-->
+    <!--使用handlebars模板-->
+    <script type="text/html" id="recommendTpl">
+        {{#each result}}
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    {{{productImgSm}}}
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="">{{productName}}</h4>
+                <p class="red">{{productPinkage}}</p>
+                <span class="left">{{productFrom}}{{productTime}}</span>
+                <span class="right">{{productComCount}}</span>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/url.js"></script>
+    <script src="js/handlebars-1.0.0.beta.6.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>

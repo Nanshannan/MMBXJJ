@@ -1,0 +1,38 @@
+@charset "utf-8";
+#navcontent {
+  height: 40px;
+  line-height: 40px;
+  background-color: #999999;
+  padding: 0px 10px;
+}
+#navcontent > span {
+  float: left;
+  margin-right: 3px;
+}
+#navcontent > span > a:after {
+  content: '>';
+}
+#navcontent > a {
+  float: right;
+  height: 30px;
+  line-height: 30px;
+  padding: 0px 10px;
+  background-color: #cccccc;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+#page {
+  background-color: #FFFFFF;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+#page > .row > div > a {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0px 10px;
+  background-color: #cccccc;
+  margin: 0 auto;
+  border-radius: 10px;
+}

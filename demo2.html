@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button id="btn">呵呵</button>
+<script>
+    function hehe(){
+        num++;
+        console.log(1);
+        if(num==5){
+            return;
+        }else{
+            hehe();
+        }
+    }
+    var num =1;
+    btn.onclick = function(){
+        hehe();
+    }
+</script>
+</body>
+</html>

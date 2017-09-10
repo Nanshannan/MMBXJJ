@@ -1,0 +1,33 @@
+@charset "utf-8";
+#category{
+  .category-title{
+    >li{
+      >a{
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        font-weight: bold;
+        font-size: 14px;
+        border-bottom: 1px solid #ccc;
+        padding:0px 10px;
+        background:#ededed url(http://www.zuyushop.com/wap/images/arrow1.gif) right center no-repeat;
+      }
+      >ul{
+        display: none;
+        li{
+          float: left;
+          width: 33.33%;
+          height: 30px;
+          text-align: center;
+          line-height: 30px;
+          border-right: 1px solid #999999;
+          border-bottom: 1px solid #999999;
+        }
+        li:nth-child(3n){
+          border-right: none;
+        }
+      }
+    }
+
+  }
+}

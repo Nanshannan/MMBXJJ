@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+//菜单部分开始
+#menu{
+  background-color: #FFFFFF;
+  margin-top: 10px;
+  padding: 10px;
+  >.row{
+    >div{
+      >a{
+        display: block;
+        text-align: center;
+        img{
+          width: 50px;
+          height: 50px;
+        }
+        p{
+          margin-top: 5px;
+          font-size: 12px;
+        }
+      }
+    }
+    >div:nth-last-child(-n+4){
+      display: none;
+    }
+  }
+}
+//菜单部分结束
+
